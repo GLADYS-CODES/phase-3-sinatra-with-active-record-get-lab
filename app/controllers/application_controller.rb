@@ -26,7 +26,8 @@ get '/baked_goods/by_price' do
 
   end
   get '/baked_goods/most_expensive' do
-		baked_good = BakedGood.by_price.first
+		baked_good = BakedGood.most_expensive
     baked_good.to_json
 end
+
 end
